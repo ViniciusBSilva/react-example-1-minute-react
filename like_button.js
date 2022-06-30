@@ -3,7 +3,6 @@
 const e = React.createElement;
 
 class LikeButton extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -12,8 +11,7 @@ class LikeButton extends React.Component {
     }
 
     render() {
-
-        if (this.props.liked) {
+        if (this.state.liked) {
             return 'You liked this.';
         }
 
@@ -25,9 +23,7 @@ class LikeButton extends React.Component {
             },
             'Like'
         );
-
     }
-
 }
 
 const domContainer = document.querySelector('#like_button_container');
